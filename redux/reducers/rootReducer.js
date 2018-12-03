@@ -5,15 +5,15 @@
  */
 import { combineReducers } from "redux";
 
-import { reducerOne } from "reducers/one";
-import { reducerTwo } from "reducers/two";
+import { somethingReducer } from "reducers/one";
+import { loadingReducer } from "reducers/two";
 import { reducerThree } from "reducers/three";
 import { reducerFour } from "reducers/four";
 import { reducerFive } from "reducers/five";
 
 const rootReducer = combineReducers({
-    reducerOne,
-    reducerTwo,
+    somethingReducer,
+    loadingReducer,
     reducerThree,
     reducerFour,
     reducerFive
