@@ -1,12 +1,10 @@
 const featureOneStyles = () => ({
-    classOneName: {
-        marginLeft: "50px",
-        padding: "15px",
-        width: "60%"
+    red: {
+        color: "red"
     },
 
-    classTwoName: {
-        width: "100px"
+    blue: {
+        color: "blue"
     }
 });
 
