@@ -5,6 +5,8 @@ import { somethingReducer } from "../redux/reducers/reducerOne";
 
 import * as types from "../redux/actions/constants";
 
+// Line for mocking UUID with Jest - jest.mock("uuid/v4", () => () => "00000000-0000-0000-0000-000000000000");
+
 describe("something reducer", () => {
     it("should return the initial state, empty", () => {
         expect(something(undefined, {})).toEqual([]);
