@@ -57,7 +57,7 @@ describe("something action creators", () => {
 
     it("should create an action to stop loading", () => {
         const action = { type: types.STOP_LOADING, isLoading: false};
-        expect(startLoading()).toEqual(action);
+        expect(stopLoading()).toEqual(action);
     });
 
 
