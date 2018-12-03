@@ -1,5 +1,4 @@
 import React from "react";
-import featureOneStyles from "./featureOne";
 import FeatureOnePresentational from "./featureOnePresentational";
 import {
     addSomething,
