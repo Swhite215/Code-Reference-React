@@ -9,7 +9,7 @@ import {
 const uuid = require("uuid/v4");
 
 //Reducers take the state and an action and return the new state
-export const somethingReducer = (state, action) => {
+export const somethingReducer = (state = [], action) => {
     switch (action.type) {
         case ADD_SOMETHING:
             return [...state, action.something];
