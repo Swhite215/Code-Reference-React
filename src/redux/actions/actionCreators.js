@@ -7,7 +7,7 @@ import {
     STOP_LOAD
 } from "./constants";
 
-import getFunction from "../../ajax";
+import getFunction from "../services/ajax";
 
 //Basic Action Creators
 export const addSomething = something => ({ type: ADD_SOMETHING, something });
