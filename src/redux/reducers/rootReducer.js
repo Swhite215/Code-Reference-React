@@ -5,11 +5,11 @@
  */
 import { combineReducers } from "redux";
 
-import { somethingReducer } from "reducers/one";
-import { loadingReducer } from "reducers/two";
-import { reducerThree } from "reducers/three";
-import { reducerFour } from "reducers/four";
-import { reducerFive } from "reducers/five";
+import { somethingReducer } from "reducers/reducerOne";
+import { loadingReducer } from "reducers/reducerTwo";
+import { reducerThree } from "reducers/reducerThree";
+import { reducerFour } from "reducers/reducerFour";
+import { reducerFive } from "reducers/reducerFive";
 
 const rootReducer = combineReducers({
     somethingReducer,
