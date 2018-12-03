@@ -28,10 +28,6 @@ router.get("/exampleOne", async (req, res, next) => {
     } catch (e) {
         next(e);
     }
-
-    !isGetSuccessful
-        ? res.sendStatus(409, "Get was not sucessful")
-        : res.sendStatus(200);
 });
 
 /**
