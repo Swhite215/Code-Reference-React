@@ -1,3 +1,5 @@
+import featureOneStyles as styles from "./featureOne";
+
 export const FeatureOnePresentational = ({
     onChange,
     name,
@@ -9,16 +11,16 @@ export const FeatureOnePresentational = ({
 }) => {
     return (
         <div>
-            <h1>{name}</h1>
-            <h2>{statePropertyOne}</h2>
-            <h2>{statePropertyTwo}</h2>
-            <button name="addFunction" onClick={addFunction}>
+            <h1 className={styles.red}>{name}</h1>
+            <h2 className={styles.blue}>{statePropertyOne}</h2>
+            <h2 className={styles.red}>{statePropertyTwo}</h2>
+            <button className={styles.blue} name="addFunction" onClick={addFunction}>
                 Add
             </button>
-            <button name="editFunction" onClick={editFunction}>
+            <button className={styles.red} name="editFunction" onClick={editFunction}>
                 Edit
             </button>
-            <button name="removeFunction" onClick={removeFunction}>
+            <button className={styles.blue} name="removeFunction" onClick={removeFunction}>
                 Remove
             </button>
             <input onChange={onChange} />
