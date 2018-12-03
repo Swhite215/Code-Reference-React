@@ -12,15 +12,14 @@ const uuid = require("uuid/v4");
 export const somethingReducer = (state, action) => {
     switch (action.type) {
         case ADD_SOMETHING:
-            return {
-                ...action.something,
-                id: uuid()
-            };
+            return [...state, action.something];
         case EDIT_SOMETHING:
-            return {
-                ...state,
-                ...action.something
-            };
+            return state.map(something => {
+                if (something.id !== action.something.id) {
+                    return something;
+                }
+                return action.something;
+            });
         case REMOVE_SOMETHING:
             return state.filter(something => something.id !== action.id);
         default:
