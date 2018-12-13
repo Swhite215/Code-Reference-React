@@ -47,7 +47,7 @@ app.get("/api/getExample/:month/:year", (req, res) => {
 //POST REQUESTS
 app.post("/api/postExample", (req, res) => {
     const newExample = {
-        id: examples.length + 1,
+        id: examples.length + 1, //Not an effective method for generating unique Ids
         name: req.body.name
     };
 
