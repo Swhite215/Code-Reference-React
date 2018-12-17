@@ -9,7 +9,7 @@ const app = express();
 //Middleware
 app.use(express.json()); //Allows the use of middleware in the request pipeline
 
-//REST - Representation State Transfer, Ray Felding, METHODS below
+//REST - Representation State Transfer, Roy Fielding, METHODS below
 const examples = [
     { id: 1, name: "Example Data One" },
     { id: 2, name: "Example Data Two" },
