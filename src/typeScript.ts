@@ -39,7 +39,7 @@ interface PointInterface {
 
 //Object producing error
 let errorObject: PointInterface = {
-    name: "Hello",
+    name: "Hello", //Will raise error due to conflicting property value
     id: 1
 };
 
