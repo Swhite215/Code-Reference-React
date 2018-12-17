@@ -58,7 +58,8 @@ class FeatureOneContainer extends React.Component {
 const mapStateToProps = state => {
     return {
         storePropertyOne: state.storePropertyOne,
-        storePropertyTwo: state.storePropertyTwo
+        storePropertyTwo: state.storePropertyTwo,
+        pathname: state.router.location.pathname
     };
 };
 
