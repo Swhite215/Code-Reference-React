@@ -32,10 +32,22 @@ const log = message => {
 };
 
 //Interface - Defines shape of an object, can't have implementation
-interface Point {
+interface PointInterface {
     x: number;
     y: number;
 }
+
+//Object producing error
+let errorObject: PointInterface = {
+    name: "Hello",
+    id: 1
+};
+
+//Acceptable Object
+let acceptableObject: PointInterface = {
+    x: 1,
+    y: 1
+};
 
 //Declared method expecting argument of type and shape Point
 let drawPoint = (point: Point) => {
