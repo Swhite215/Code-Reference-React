@@ -1,4 +1,5 @@
 //Global Timer Module
+//The timer module exposes a global API for scheduling functions to be called at some future period of time
 
 //Set Timeout
 let waitTime = 3000;
