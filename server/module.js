@@ -12,6 +12,6 @@ function log(message) {
 }
 
 //How to export something from a module
-module.exports.log = log; //Method on exports object
-module.exports = log; //Method as exports object
-exports.log = log; //Method as exports object
+module.exports.log = log; //Method on exports object, access with .log
+module.exports = log; //Method as exports object, access by calling instance
+exports.log = log; //Method as exports object, access by calling instance
