@@ -10,7 +10,7 @@ let myInterval = setInterval(() => {
     emitter.emit("test", { name: "Spencer" });
 }, 1000);
 
-//One Method for Stopping Emitter
+//Method to exit process when data event occurs
 process.stdin.on("data", data => {
     clearInterval(myInterval);
     console.log("Emitter is being stopped.");
