@@ -17,7 +17,7 @@ let realPerson = {
 rl.question("What is your name? ", answer => {
     realPerson.name = answer;
 
-    //Sets the prompt that will be writtien when rl.prompt() is called
+    //Sets the prompt that will be written when rl.prompt() is called
     rl.setPrompt(`What would ${realPerson.name} say? `);
     rl.prompt();
 
