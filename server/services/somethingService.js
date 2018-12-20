@@ -1,14 +1,14 @@
 //A service should operate indepedently in order to be modular in its application
-class SomethingService() {
-    this.getSomething = async function() {};
+class SomethingService {
+    getSomething() {}
 
-    this.getSomethings = async function() {};
+    getSomethings() {}
 
-    this.updateSomething = async function() {};
+    updateSomething() {}
 
-    this.createSomething = async function() {};
+    createSomething() {}
 
-    this.deleteSomething = async () => {};
+    deleteSomething() {}
 }
 
 module.exports = SomethingService;
