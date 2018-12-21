@@ -1,7 +1,10 @@
 //Mocha - Describe, Run and Build Tests
 //Chai - Assertion Engine, Checks Values
 //TDD - Write Test -> Code
-//Nock -
+//Nock - Mocks http requests
+//SUT - System Under Test
+//Collaborators - Dependencies involved in our code
+
 const expect = require("chai").expect;
 const should = require("chai").should;
 const assert = require("chai").assert;
@@ -17,7 +20,7 @@ describe("Tools", () => {
     });
 
     describe("loadWiki()", () => {
-        //Mocha will wait to finish test when done is invoked
+        //Mocha will wait to finish test until done is invoked
         it("should load wikipedia page", done => {
             //Providing a callback to loadWiki that will deal with response body from request
             tools.loadWiki({ first: "Abraham", last: "Lincoln" }, html => {
