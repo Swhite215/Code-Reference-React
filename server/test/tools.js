@@ -21,7 +21,7 @@ module.exports = {
             });
 
             res.on("end", () => {
-                callback(body);
+                callback(body); //Have to use callback to get response body from htts.get
             });
         });
     }
