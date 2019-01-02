@@ -38,7 +38,7 @@ rl.question("What is your name? ", answer => {
     //rl.close(); //Closes the stream
 });
 
-//Listesn for close event to be emitted and provides callback function
+//Listen for close event to be emitted and provides callback function
 rl.on("close", () => {
     console.log(
         `${realPerson.name} is a person that says ${realPerson.sayings}`
