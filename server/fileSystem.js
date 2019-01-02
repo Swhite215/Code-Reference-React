@@ -53,7 +53,7 @@ fs.writeFile("sample.txt", markdown.trim(), err => {
 
 //Appending to a File
 let extraMarkdown = `
-*Lorom ipsum dolor
+Lorom ipsum dolor
 `;
 
 fs.appendFile("sample.txt", extraMarkdown, err => {
