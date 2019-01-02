@@ -33,3 +33,9 @@
 //Iterator - Provide a way to access the elements of an afggregate object sequentially without exposing its underlying representation.
 //Observer - Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
 //Strategy - Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets algorithm vary independently from clients that use it.
+//Interpreter - Used to define the grammar for instructions that form part of a language or notation, whilst allowing the grammar to be easily extended.
+//Mediator - Used to reduce coupling between classes that communicate with each other. Instead of class communicating directly, and thus requiring knowledge of their implementation, the classes send messages via a mediator object.
+//Memento - Used to capture the current state of an object, and store it in such a manner that it can be restored at a later time without breaking the rules of encapsulation.
+//State - Used to alter the behaviour of an object as its internal state changes. The pattern allows the class for an object to apparently change at run-time.
+//Template Method - Used to define the basic steps of an algorithm and allow the implementation of the individual steps to be changed.
+//Visitor - Used to separate a relatively complex set of structured data classes from the functionality that may be performed upon the data they hold.
