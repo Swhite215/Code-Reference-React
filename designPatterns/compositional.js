@@ -1,3 +1,8 @@
+//Three Different Types of Prototypal Object Oriented
+//1. Concatenative Inheritance - Process of inheriting features directly from one object to another by copying the source objects properties.
+//2. Prototype Delegation -
+//3. Functional Inheritance - Produce an object from a factory, and extend the produced object by assigning properties to it directly, using concatenative inheritance.
+
 //Function that returns an object with cast method
 const canCast = state => {
     return {
