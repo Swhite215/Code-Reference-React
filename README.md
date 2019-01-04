@@ -1,6 +1,8 @@
 # Code-Reference-MERN
 Client-Side: React, and Redux
+
 Server-Side: NodeJS, MongoDB, SQL, and Redis
+
 Testing: Mocha, Chai, Jest, Sinon, and Istanbul
 
 # Objective
