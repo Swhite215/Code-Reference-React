@@ -15,7 +15,8 @@ To provide reference materials for a variety of topics encountered when using th
 ##### - Testing
 
 ### React
+##### - Components
 ##### - Redux
-##### - Redux
+##### - Testing
 
 TO-DO: [Design Patterns](https://github.com/Swhite215/Code-Reference-MERN/tree/master/designPatterns)
