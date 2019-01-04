@@ -5,7 +5,7 @@ const proxyquire = require("proxyquire");
 const sinon = require("sinon");
 const db = require("sqlite");
 
-describe("Reservations Library", function() {
+describe("Stub - Reservations Library", function() {
     //Stub to remove debugging
     const debugStub = function() {
         return sinon.stub();
@@ -21,7 +21,7 @@ describe("Reservations Library", function() {
 
     //Stub to simulate a custom DB response
     context("Create DB", function() {
-        let dbSTub;
+        let dbStub;
 
         //Use before to set-up stub
         before(function() {
