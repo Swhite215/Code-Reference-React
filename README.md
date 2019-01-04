@@ -6,9 +6,16 @@ To provide reference materials for a variety of topics encountered when using th
 
 
 ## Sections
+
 ### General
+
 ### NodeJS
+##### - Express
+##### - Design Patterns
+##### - Testing
+
 ### React
-##### Redux
+##### - Redux
+##### - Redux
 
 TO-DO: [Design Patterns](https://github.com/Swhite215/Code-Reference-MERN/tree/master/designPatterns)
