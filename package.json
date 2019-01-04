@@ -5,13 +5,16 @@
     "main": "index.js",
     "dependencies": {
         "chai": "^4.2.0",
+        "chai-http": "^4.2.1",
         "cors": "^2.8.5",
         "express": "^4.16.4",
         "joi": "^14.3.1",
         "log-update": "^2.3.0",
         "moment": "^2.23.0",
+        "morgan": "^1.8.1",
         "multiparty": "^4.2.1",
         "nock": "^10.0.4",
+        "nyc": "^13.1.0",
         "proxyquire": "^2.1.0",
         "sinon": "^7.2.2",
         "sinon-chai": "^3.3.0",
@@ -27,6 +30,7 @@
         "eslint-plugin-standard": "^4.0.0"
     },
     "scripts": {
+        "coverage": "cross-env DEBUG=nadia:* nyc --reporter=text --reporter=html mocha server/test",
         "test": "cross-env DEBUG=nadia mocha server/test"
     },
     "repository": {
