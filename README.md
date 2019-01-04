@@ -17,9 +17,13 @@ To provide reference materials for a variety of topics encountered when using th
 
 ### React
 ##### - Components
-###### &nbsp;&nbsp;&nbsp;&nbsp;Container Example
-######      Presentational
+###### &nbsp;&nbsp;&nbsp;&nbsp; [Container Example](https://github.com/Swhite215/Code-Reference-MERN/blob/master/src/featureOne/featureOneContainer.js)
+###### &nbsp;&nbsp;&nbsp;&nbsp; [Presentational Example](https://github.com/Swhite215/Code-Reference-MERN/blob/master/src/featureOne/featureOnePresentational.js)
 ##### - Redux
+###### &nbsp;&nbsp;&nbsp;&nbsp; [Store Example](https://github.com/Swhite215/Code-Reference-MERN/tree/master/src/redux/store)
+###### &nbsp;&nbsp;&nbsp;&nbsp; [Actions Example](https://github.com/Swhite215/Code-Reference-MERN/tree/master/src/redux/actions)
+###### &nbsp;&nbsp;&nbsp;&nbsp; [Reducers Example](https://github.com/Swhite215/Code-Reference-MERN/tree/master/src/redux/reducers)
 ##### - Testing
+###### &nbsp;&nbsp;&nbsp;&nbsp; [Tests Example](https://github.com/Swhite215/Code-Reference-MERN/tree/master/src/tests)
 
 TO-DO: [Design Patterns](https://github.com/Swhite215/Code-Reference-MERN/tree/master/designPatterns)
