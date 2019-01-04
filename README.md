@@ -17,7 +17,7 @@ To provide reference materials for a variety of topics encountered when using th
 
 ### React
 ##### - Components
-###### &nbsp;&nbsp;Container Example
+###### &nbsp;&nbsp;&nbsp;&nbsp;Container Example
 ######      Presentational
 ##### - Redux
 ##### - Testing
