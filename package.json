@@ -30,8 +30,8 @@
         "eslint-plugin-standard": "^4.0.0"
     },
     "scripts": {
-        "coverage": "cross-env DEBUG=nadia:* nyc --reporter=text --reporter=html mocha testing",
-        "test": "cross-env DEBUG=nadia mocha testing"
+        "coverage": "cross-env DEBUG=testing:* nyc --reporter=text --reporter=html mocha testing",
+        "test": "cross-env DEBUG=testing mocha testing"
     },
     "repository": {
         "type": "git",
