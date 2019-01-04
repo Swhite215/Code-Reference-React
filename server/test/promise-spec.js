@@ -2,7 +2,7 @@ const should = require("chai").should();
 const Reservation = require("./reservation");
 const reservations = require("./reservations");
 
-describe("Reservations Library", function() {
+describe("Promises - Reservations Library", function() {
     //Asynchronous Code - Promise
     context("Validate", function() {
         it("should pass a valid reservation with no optional fields", function() {
