@@ -13,9 +13,12 @@ To provide reference materials for a variety of topics encountered when using th
 ##### - Express
 ##### - Design Patterns
 ##### - Testing
+##### - Modules
 
 ### React
 ##### - Components
+###### - Container
+###### - Presentational
 ##### - Redux
 ##### - Testing
 
