@@ -2,7 +2,7 @@ const Reservation = require("./reservation");
 const expect = require("chai").expect;
 const should = require("chai").should();
 
-describe("Reservation Schema", function() {
+describe("Sync and Async - Reservation Library", function() {
     //Synchronous Code
     context("Date and Time Combination", function() {
         it("should return a ISO 8601 date and time with valid input", function() {
