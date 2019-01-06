@@ -18,7 +18,7 @@ To provide reference materials for a variety of topics encountered when using th
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [Service](https://github.com/Swhite215/Code-Reference-MERN/tree/master/server/services)
 
 ##### - Design Patterns
-###### &nbsp;&nbsp;&nbsp;&nbsp; [Design Pattern Overview](https://github.com/Swhite215/Code-Reference-MERN/blob/master/designPatterns/overview.js)
+###### &nbsp;&nbsp;&nbsp;&nbsp; [Design Pattern Overview](https://github.com/Swhite215/Code-Reference-MERN/blob/master/designPatterns/overview.txt)
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [Creational - Singleton](https://github.com/Swhite215/Code-Reference-MERN/tree/master/designPatterns/singleton)
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [Creational - Protoype](https://github.com/Swhite215/Code-Reference-MERN/tree/master/designPatterns/prototype)
 ###### &nbsp;&nbsp;&nbsp;&nbsp; [Creational - Factory](https://github.com/Swhite215/Code-Reference-MERN/tree/master/designPatterns/factory)
