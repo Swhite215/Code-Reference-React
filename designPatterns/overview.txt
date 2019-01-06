@@ -28,7 +28,7 @@ Creational Patterns:
     5. Abstract Factory - Used to provde a client with a set of related or dependant objects. The "family" of objects created by the factory are determined at run-time.
 
 Structural Patterns:
-    1. Adapter - Convert the interface of a class into another clients expect. Adapter lets clqasses work together that couldn't otherwise because of incompatiable interfaces.
+    1. Adapter - Convert the interface of a class into another clients expect. Adapter lets classes work together that couldn't otherwise because of incompatiable interfaces.
     2. Proxy - Provide a surrogate or placeholder for another object to control access to it.
     3. Composite - Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
     4. Decorator - Attach Additional Responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
@@ -39,7 +39,7 @@ Structural Patterns:
 Behavioral Patterns:
     1. Chain of Responsibility - Avoid coupling the sender of a request to its receiver by giving more than one object a chance to deal with the request. Chain the receiving objects and pas the request along the chain.
     2. Command - Encapsulate a request as an object, thereby letting you parameterize with different requests, queue or log requests, and support undoable operations.
-    3. Iterator - Provide a way to access the elements of an afggregate object sequentially without exposing its underlying representation.
+    3. Iterator - Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
     4. Observer - Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
     5. Strategy - Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets algorithm vary independently from clients that use it.
     6. Interpreter - Used to define the grammar for instructions that form part of a language or notation, whilst allowing the grammar to be easily extended.
