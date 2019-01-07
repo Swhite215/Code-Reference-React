@@ -1,4 +1,8 @@
 //TypeScript is a superset of JavaScript
+//npm install -g typescript
+//npm i @types
+//npm run build = tsc --w
+//npm start tsc && ts-node ./dist/index.js
 //run tsc filename to transpile
 
 //imports
