@@ -2,7 +2,7 @@
 //run tsc filename to transpile
 
 //imports
-import { modulePoint } from "../src/typeModule";
+import { modulePoint } from "./TypeModule";
 
 //Type Annotations - Used to enforce type checking
 let number: number = 10;
