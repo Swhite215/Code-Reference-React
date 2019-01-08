@@ -1,0 +1,16 @@
+1. Docker:
+    - Performs operating-system level virutalization, "containerization"
+    - docker-compose up -d, create and start all services from configuration
+
+2. PM2: https://www.npmjs.com/package/pm2
+    - Production Runtime and Process Manager for NodeJS applications
+    - pm2 start app.js --watch
+    - pm2 stop <app_name|id|'all'|json_conf>
+    - pm2 delete <app_name|id|'all'|json_conf>
+    - pm2 describe <app_name|id>
+    - pm2 monitor
+    - pm2 list, lists all apps running
+    - pm2 show app, gets more details about an app
+    - pm2 reload all
+    - pm2 kill, ends all running processes
+    - pm2 logs, show logs for running processes
