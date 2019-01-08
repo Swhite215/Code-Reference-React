@@ -1,4 +1,4 @@
-1. Docker:
+1. Docker: https://www.docker.com/
     - Performs operating-system level virutalization, "containerization"
     - docker-compose up -d, create and start all services from configuration
 
@@ -14,3 +14,20 @@
     - pm2 reload all
     - pm2 kill, ends all running processes
     - pm2 logs, show logs for running processes
+
+3. Winston: https://www.npmjs.com/package/winston
+    - Logging Library
+    - Create Logger Instance, Set Transports, Use in Server
+
+4. Morgan: https://www.npmjs.com/package/morgan
+    - HTTP Request Logger Middleware for Node.js
+    - Includes method, path, content length
+    - Logs once request is sent for status, response time
+    - Can also include referrer, user agent
+    - Can be used with most loggers
+
+5. Express Request Id: https://www.npmjs.com/package/express-request-id
+    - Manages Request IDs 
+    - LIstens for header named X-Request-Id  
+    - Generates UUID if not found
+    - Attaches ID to request object
