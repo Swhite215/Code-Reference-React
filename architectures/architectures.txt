@@ -1,0 +1,13 @@
+Microservice Architecture
+    1. What is it?
+        - Application built from independent, modular services
+        - Services communicate with standard protocols
+        - Each service is distinct and purpose built (loose coupling)
+    2. Why?
+        - Independent development
+        - Problems can be localized
+    3. Reality
+        - Requires careful planning and discipline
+        - Errors can affect multiple services
+        - Determining root causes can be difficult
+
