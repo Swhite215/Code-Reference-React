@@ -1,0 +1,25 @@
+Logging
+    1. Why Log?
+        - Diagnostics of Application Health
+        - Debugging to determine what and when
+        - Analysis of traffic, activity
+    2. Useful things to Log
+        - Staus of operation
+        - What was requested and how
+        - Who made the reques
+        - How long did request take
+        - Identifiers
+        - Successes - Positive Indicator
+    3. Avoid Logging
+        - Personally Identifiable Information
+        - POST Contents
+        - Sensitive Information
+    4. How
+        - Send to file
+        - Redirect with a process manager
+    5. Custom Express Error Pages
+        - Control User Experience
+        - Theemd Error Pages
+        - 404 Call to Action
+    6. Examples
+        - Request Logging Middleware: See ()
