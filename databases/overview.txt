@@ -29,6 +29,7 @@ Document/NoSQL Databases
 
 Document Databases
     1. MongoDB
+        - mongoimport --username username --password password --host databaseWithPort --db dbName --collection collectionName --file dbFile --type type --headerline 
     2. Redis, key-value
     3. Couchbase
     4. CouchDB
