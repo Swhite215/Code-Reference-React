@@ -1,0 +1,65 @@
+Deploying
+    1. Stack Overview - Mongo, Express, Angular, Node
+        - MongoDB - Document Database, mLab
+        - Express Server - API
+        - Angular - Client
+    2. Application Details
+        - Read only
+        - Templates expose environnment
+        - Timestamps
+        - Files generated and not stored in SCM
+    3. Packaging Choices - Yarn or NPM
+        - NPM, node package manager
+            - Drawbacks
+                - Slow installations
+                - Non-deterministic builds, inconsistencies
+                - Security concerns
+        - Yarn
+            - Highlights
+                - Parallel builds
+                - Network resiience
+                - Deterministic
+                - Offline Cache
+
+Github
+    1. Summary 
+    2. Action Steps
+        - git init 
+        - git add -a
+        - git commit -a -m "First Commit"
+        - git clone folder newFolder
+        - git remote add second ../local_clone
+        - git remote add origin gitRepo
+        - git push -u origin master
+
+AWS Elastic Beanstalk
+    1. Summary -
+    2. Action Steps
+        - Install Python
+        - pip install awsebcli
+
+Azure
+    1. Summary
+    2. Action Steps
+        - Install CLI
+
+Heroku
+    1. Summary - Platform and Service Provider
+        - Plugins and Modules
+        - Uses git for deployment
+        - Caveats
+            - Static files don't work well, can't use relative paths
+            - Slow startup after idle
+            - Cost
+    2. Action Steps
+        - Install CLI: https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+        - Sign Up for an Account
+        - heroku login
+        - login on site
+        - heroku create --remote production
+        - git remote -v
+        - heroku config:set MONGO_URL=mongodb://swhite:Eighty018@ds155684.mlab.com:55684/linkedin_apis
+        - heroku config:set NG_CMD=prod
+        - git push production master
+        - site url deployed to Heroku
+
