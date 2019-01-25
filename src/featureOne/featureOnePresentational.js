@@ -27,3 +27,5 @@ export const FeatureOnePresentational = ({
         </div>
     );
 };
+
+export default FeatureOnePresentational;
