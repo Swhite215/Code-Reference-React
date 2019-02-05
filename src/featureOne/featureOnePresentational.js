@@ -28,4 +28,5 @@ export const FeatureOnePresentational = ({
     );
 };
 
+//Export HOC withStyles for material or use css modules/css files
 export default FeatureOnePresentational;
