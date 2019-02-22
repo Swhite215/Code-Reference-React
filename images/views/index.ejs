@@ -19,7 +19,7 @@
                 <div class="file-field input-field">
                     <div class="btn grey">
                         <span>File</span>
-                        <input name="myImage" type="file" />
+                        <input name="myImages" type="file" multiple />
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text" />
@@ -29,11 +29,11 @@
             </form>
             <br />
             <!-- EJS STATEMENT -->
-            <img
-                src="<%= typeof file != 'undefined' ? file : ''; %>"
-                alt=""
-                class="responsive-img"
-            />
+            <div class="images">
+                <% if (locals.files) { %> <% for (file of locals.files) {%>
+                <img src="<%=file%>" alt="" />
+                <%}%> <% } %>
+            </div>
         </div>
 
         <script
@@ -42,5 +42,6 @@
             crossorigin="anonymous"
         ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="../src/main.js"></script>
     </body>
 </html>
