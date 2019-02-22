@@ -31,7 +31,7 @@ const upload = multer({
     fileFilter: function(req, file, cb) {
         checkFileType(file, cb);
     }
-}).single("myImage");
+}).array("myImages");
 
 //Public Folder
 app.use(express.static("./public"));
@@ -46,19 +46,22 @@ app.get("/", (req, res, next) => {
 app.post("/upload", (req, res, next) => {
     upload(req, res, err => {
         if (err) {
-            //Rendering View and Passing Dynamic Error Variable
             res.render("index", {
                 msg: err
             });
         } else {
-            if (req.file == undefined) {
-                res.render("index", {
-                    msg: "Error: No File Selected"
+            if (req.files) {
+                let files = req.files.map(file => {
+                    return `uploads/${file.filename}`;
                 });
-            } else {
+
                 res.render("index", {
-                    msg: "File Uploaded",
-                    file: `uploads/${req.file.filename}`
+                    msg: "Files Uploaded",
+                    files: files
+                });
+            } else if (req.file == undefined && req.files == undefined) {
+                res.render("index", {
+                    msg: "Error: No File(s) Selected"
                 });
             }
         }
