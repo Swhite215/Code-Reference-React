@@ -1,0 +1,99 @@
+Angular Framework
+
+1. ngModule - Root Module
+  - Declarations = Components
+  - Imports = Modules
+  - Providers = Services
+  - Bootstrap = Root component inserted into index.html
+
+2. Component
+  - @Component Decorator
+    - Selector - Where component is rendered
+    - templateUrls - path to template html
+    - styleUrls - path to stylesheets
+  - export class Component {}
+    - Can add properties, methods, lifecycle methods
+    - property: type = value
+    - access properties and methods with this
+
+3. Interpolation
+  - {{ variable }}
+  = {{ variable | pipe}}
+
+4. Commands
+  - ng generate component components/name
+    - ng g c components/name
+  - ng generate service services/name
+    - ng g s services/name
+  - ng serve
+  -
+
+5. Directives
+  - Component - Renders a view with component, template, and styles
+    - <app-component-name>
+  - Attribute - change the appearance or behavior of an Elements
+    - [ngClass]="method()", method() should return a classes object
+  - Structural - Add, Remove, or Manipulate Elements
+    - *ngIf, *ngFor, [ngSwitch] + *ngSwitchCase + *ngSwitchDefault
+
+6. Props
+  - Data passed to a component
+    - [prop]='value'
+    - Receiving component needs @Input() prop: Type
+
+7. TypeScript - Compiler, like Babel
+  - Type Annotations - var name: type = value;
+  - Type Assertions - var name = <type>value;
+
+8. Events
+  - (eventName)='method(value)'
+
+9. Service
+  - Class that performs GET, PUT, POST, and DELETE communication with APIs
+  - @Injectable({ providedIn: 'root'}) allows injection into components
+  - import { someService} from "./services/someService.service"
+  - constructor(private someService:someService){}
+    - this.someService.method()
+    - this.someService.method().subscribe(callback);
+    - this.somoeService.method().subscribe({onNext(val) {}, onError(err){}, onComplete(val){}})
+
+10. HTTPClientModule
+  - GET, PUT, POST, DELETE AJAX
+  - in app.module.ts
+    - import {HttpClientModule} from "@angular/common/http"
+    - add HttpClientModule to imports
+  - in someService.service.ts
+    - import { HttpClient, HttpHeaders } from "@angular/common/http";
+    - constructor(private http:HttpClient)
+    - import { Observable } from "rxjs"
+    - method():Observable<Type>{}
+      - this.http.CRUD<type>(url, ?body, ?options)
+
+11. Emitting Upwards
+    - Starting Component.ts
+      - import {EventEmitter, Output} from "@angular/core"
+      - @Output () emitMethod: EventEmitter<type> = new EventEmitter();
+    - Parent Component
+      - (emitMethod)="parentMethod($event)"
+      - parentMethod(var:type) { //code }
+
+12. [(ngModel)]]
+  - in app.module.ts - import { FormsModule } from "@angular/forms";
+  - in app.module.ts - add FormsModule to imports
+  - in Component HTML - [(ngModel)]="value of name attribute"
+
+13. Routing
+  - Say yes when prompted to use Angular routing when creating new project
+  - in app-routing.module.ts
+    - import {ViewComponents} from "./components/views"
+    - add to const routes: Route = [{path="path", component: ViewComponents}]
+  - in app.component.html or top level navigation - add <router-outlet></router-outlet>
+  - in any .html file - add <a routerLink="/path"></a>
+
+14. Testing
+  - Jasmine
+
+Questions:
+1. What is best practice for dealing with errors from Observables?
+2. Can you emit an event up multiple levels, or should it be a single emission upward?
+3.
