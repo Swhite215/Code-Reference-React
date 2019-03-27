@@ -26,7 +26,9 @@ Angular Framework
   - ng generate service services/name
     - ng g s services/name
   - ng serve
-  -
+  - ng build
+  - ng new project
+  - ng --version
 
 5. Directives
   - Component - Renders a view with component, template, and styles
@@ -96,4 +98,3 @@ Angular Framework
 Questions:
 1. What is best practice for dealing with errors from Observables?
 2. Can you emit an event up multiple levels, or should it be a single emission upward?
-3.
