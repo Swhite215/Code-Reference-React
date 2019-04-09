@@ -6,7 +6,7 @@ Angular Framework
   - Providers = Services
   - Bootstrap = Root component inserted into index.html
 
-2. Component
+2. Components
   - @Component Decorator
     - Selector - Where component is rendered
     - templateUrls - path to template html
