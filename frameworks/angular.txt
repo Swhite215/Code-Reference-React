@@ -98,3 +98,4 @@ Angular Framework
 Questions:
 1. What is best practice for dealing with errors from Observables?
 2. Can you emit an event up multiple levels, or should it be a single emission upward?
+3. What are the next Angular topics I need to expose myself too?
