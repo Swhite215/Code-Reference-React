@@ -37,3 +37,12 @@ for (let [key, value] of Object.entries(m)) {
 
 console.log(maxArray.slice(0, 5))
 console.log(dealerArray.slice(0, 5))
+
+// Write File
+let wb = XLSX.utils.book_new();
+let ws = XLSX.utils.json_to_sheet(json)
+XLSX.utils.book_append_sheet(wb, ws, "Example File")
+
+console.log(wb)
+
+XLSX.writeFile(wb, 'example_file.xlsx');
