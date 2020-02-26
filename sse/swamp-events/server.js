@@ -41,8 +41,11 @@ function eventsHandler(req, res, next) {
 // Iterate clients list and use write res object method to send new nest
 function sendEventsToAll(nest, event) {
   clients.forEach(c => {
-    c.res.write(`event: ${event}\n`)
-    c.res.write(`data: ${JSON.stringify(nest)}\n\n`)
+
+    if (!c.res.finished) {
+      c.res.write(`event: ${event}\n`)
+      c.res.write(`data: ${JSON.stringify(nest)}\n\n`)
+    }
   })
 }
 
