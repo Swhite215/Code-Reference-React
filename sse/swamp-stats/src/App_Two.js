@@ -8,6 +8,10 @@ class App extends React.Component {
     this.state = {
       nests: []
     }
+
+    this.eventSource = new EventSource('http://localhost:3000/events');
+
+    this.closeConnection = this.closeConnection.bind(this);
   }
   /* Example with singular event
   componentDidMount() {
@@ -27,19 +31,19 @@ class App extends React.Component {
 
   // Example with multiple events
   componentDidMount() {
-    const events = new EventSource('http://localhost:3000/events');
 
-    events.addEventListener("addNest", (e) => {
+
+    this.eventSource.addEventListener("addNest", (e) => {
       console.log(e)
 
       const newNest = JSON.parse(e.data);
 
       let newNests = this.state.nests.concat(newNest);
 
-      this.setState({nests: newNests});
+      this.setState({ nests: newNests });
     });
 
-    events.addEventListener("deleteNest", (e) => {
+    this.eventSource.addEventListener("deleteNest", (e) => {
       console.log(e)
 
       const nestToDelete = JSON.parse(e.data);
@@ -54,32 +58,43 @@ class App extends React.Component {
         }
       });
 
-      this.setState({nests: newNests});
+      this.setState({ nests: newNests });
+    });
+
+    this.eventSource.addEventListener("closeConnection", (e) => {
+      this.closeConnection();
     });
   }
 
-  render(){
+  closeConnection() {
+    this.eventSource.close();
+  }
+
+  render() {
     return (
-      <table className="stats-table">
-        <thead>
-          <tr>
-            <th>Momma</th>
-            <th>Eggs</th>
-            <th>Temperature</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            this.state.nests.map((nest, i) =>
-              <tr key={i}>
-                <td>{nest.momma}</td>
-                <td>{nest.eggs}</td>
-                <td>{nest.temperature} ℃</td>
-              </tr>
-            )
-          }
-        </tbody>
-      </table>
+      <div>
+        <button onClick={this.closeConnection}>Close Connection</button>
+        <table className="stats-table">
+          <thead>
+            <tr>
+              <th>Momma</th>
+              <th>Eggs</th>
+              <th>Temperature</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              this.state.nests.map((nest, i) =>
+                <tr key={i}>
+                  <td>{nest.momma}</td>
+                  <td>{nest.eggs}</td>
+                  <td>{nest.temperature} ℃</td>
+                </tr>
+              )
+            }
+          </tbody>
+        </table>
+      </div>
     );
   }
 }
