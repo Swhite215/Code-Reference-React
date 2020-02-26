@@ -38,8 +38,11 @@ function eventsHandler(req, res, next) {
 }
 
 // Iterate clients list and use write res object method to send new nest
-function sendEventsToAll(newNest) {
-  clients.forEach(c => c.res.write(`data: ${JSON.stringify(newNest)}\n\n`))
+function sendEventsToAll(nest, event) {
+  clients.forEach(c => {
+    c.res.write(`event: ${event}\n`)
+    c.res.write(`data: ${JSON.stringify(nest)}\n\n`)
+  })
 }
 
 // Middleware for POST /nest endpoint
@@ -51,7 +54,29 @@ async function addNest(req, res, next) {
   res.json(newNest)
 
   // Invoke iterate and send function
-  return sendEventsToAll(newNest);
+  return sendEventsToAll(newNest, "addNest");
+}
+
+// Middleware for POST /nest endpoint
+async function deleteNest(req, res, next) {
+  const nestToDelete = req.query.nest;
+
+  res.json(nestToDelete);
+
+  console.log(nests)
+
+  nests = nests.filter((nest) => {
+    if (nest.momma != nestToDelete) {
+      return true
+    } else {
+      return false
+    }
+      
+  });
+
+  console.log(nests)
+
+  return sendEventsToAll(nestToDelete, "deleteNest")
 }
 
 // Set cors and bodyParser middlewares
@@ -61,6 +86,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // Define endpoints
 app.post('/nest', addNest);
+app.delete('/nest', deleteNest);
 app.get('/events', eventsHandler);
 app.get('/status', (req, res) => res.json({clients: clients.length}));
 
