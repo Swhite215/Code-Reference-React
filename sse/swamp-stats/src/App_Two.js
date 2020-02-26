@@ -9,7 +9,7 @@ class App extends React.Component {
       nests: []
     }
   }
-
+  /* Example with singular event
   componentDidMount() {
     const events = new EventSource('http://localhost:3000/events');
 
@@ -22,6 +22,40 @@ class App extends React.Component {
 
       this.setState({nests: newNests})
     }
+  }
+  */
+
+  // Example with multiple events
+  componentDidMount() {
+    const events = new EventSource('http://localhost:3000/events');
+
+    events.addEventListener("addNest", (e) => {
+      console.log(e)
+
+      const newNest = JSON.parse(e.data);
+
+      let newNests = this.state.nests.concat(newNest);
+
+      this.setState({nests: newNests});
+    });
+
+    events.addEventListener("deleteNest", (e) => {
+      console.log(e)
+
+      const nestToDelete = JSON.parse(e.data);
+
+      console.log(nestToDelete);
+
+      let newNests = this.state.nests.filter((nest) => {
+        if (nest.momma != nestToDelete) {
+          return true
+        } else {
+          return false
+        }
+      });
+
+      this.setState({nests: newNests});
+    });
   }
 
   render(){
