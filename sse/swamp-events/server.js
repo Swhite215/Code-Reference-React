@@ -34,6 +34,7 @@ function eventsHandler(req, res, next) {
   req.on('close', () => {
     console.log(`${clientId} Connection closed`);
     clients = clients.filter(c => c.id !== clientId);
+    res.end();
   });
 }
 
