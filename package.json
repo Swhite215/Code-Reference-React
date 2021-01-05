@@ -12,7 +12,7 @@
         "jsonwebtoken": "^8.5.0",
         "log-update": "^2.3.0",
         "moment": "^2.23.0",
-        "morgan": "^1.8.1",
+        "morgan": "^1.9.1",
         "multiparty": "^4.2.1",
         "nock": "^10.0.4",
         "nyc": "^13.1.0",
